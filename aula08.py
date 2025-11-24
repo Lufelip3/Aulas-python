@@ -43,37 +43,87 @@ os.system("color 2")
 # for i in range(len(lista)):
 #     print(lista[i])
 
-print("="*17, "SUPERMERCADO 20COMER", "="*17)
-print("""
-Digite 1: Adicionar um novo nome de Produto na lista 
-Digite 2: Remover um produto da lista  
-Digite 3: Remover todos os produtos da lista 
-Digite 4: Sair do Programa 
-Digite 5: Exibir todos os produtos da lista 
-""")
-print("="*56)
-opcao=0
-lista = []
-while opcao!=4:
-    opcao=int(input("\nDigite a opção: "))
-    if opcao ==1:
-        lista.append(input("Digite o nome do produto: "))
-    elif opcao ==2:
-        print("Digite o numero correspondente")
-        for i in range(len(lista)):
-            print(lista[i], "->", i)
-            opcaoProduto=int(input("\nDigite a opção: "))
-            while opcaoProduto>i:
-                print("Produto não encontrado")
-                opcaoProduto=int(input("\nDigite o produto: "))
-            else:
-                lista.pop(opcaoProduto)
-                print("Produto removido!!!")
-    elif opcao ==3:
-        lista.clear()
-    elif opcao ==5:
-        for i in range(len(lista)):
-            print(lista[i])
-    elif opcao!=4: 
-        print("OPÇÃO INVÁLIDA")
-else: print("\nSAIU DO PROGRAMA")
+# print("="*17, "SUPERMERCADO 20COMER", "="*17)
+# print("""
+# Digite 1: Adicionar um novo nome de Produto na lista 
+# Digite 2: Remover um produto da lista  
+# Digite 3: Remover todos os produtos da lista 
+# Digite 4: Sair do Programa 
+# Digite 5: Exibir todos os produtos da lista 
+# """)
+# print("="*56)
+# opcao=0
+# lista = []
+# while opcao!=4:
+#     opcao=int(input("\nDigite a opção: "))
+#     if opcao ==1:
+#         lista.append(input("Digite o nome do produto: "))
+#     elif opcao ==2:
+#         print("Digite o numero correspondente")
+#         for i in range(len(lista)):
+#             print(lista[i], "->", i)
+#             opcaoProduto=int(input("\nDigite a opção: "))
+#             while opcaoProduto>i:
+#                 print("Produto não encontrado")
+#                 opcaoProduto=int(input("\nDigite o produto: "))
+#             else:
+#                 lista.pop(opcaoProduto)
+#                 print("Produto removido!!!")
+#     elif opcao ==3:
+#         lista.clear()
+#     elif opcao ==5:
+#         for i in range(len(lista)):
+#             print(lista[i])
+#     elif opcao!=4: 
+#         print("OPÇÃO INVÁLIDA")
+# else: print("\nSAIU DO PROGRAMA")
+
+# #Dicionarios
+# #Estrutura de dados que trabalha com chave e valor
+# #dicionario={key:value}
+# dicionario={"item":"produto1",1:True}
+# #Inserindo \ Alterando dados no dicionario
+# #dicionario[chave]=value
+# dicionario["item2"]="produto2"
+# dicionario["item3"]="produto3"
+# dicionario["item4"]="produto4"
+# dicionario["preço"]=1500.99
+# dicionario["preço"]=3000
+# print(dicionario)
+
+# #Excluino itens no dicionario
+# #pop(key)-> remove pela chave
+# #clear()-> limpa todo o dicionario
+
+# # dicionario.pop("item3")
+# # print(dicionario)
+
+# # dicionario.clear()
+
+# #Exibindo valores do dicionairo
+# #dicionario[key]
+
+# print(dicionario["item"])
+
+# #percorrendo chaves e valores do dicionario:
+# for key,value in dicionario.items():
+#     print(key,value,sep=" : ")
+
+#ex01:
+cadastro={"Nome":"Lufe",
+            "Idade":18,
+            "Telefone":"(19) 99999-8888",
+            "Endereço":"Minha casa",}
+for key,value in cadastro.items():
+     print(key,value,sep=" : ")
+
+#ex02:
+d={"Nome":"","Idade":0,
+            "Telefone":"",
+            "Endereço":"",}
+d["Nome"]=input("Digite seu nome: ")
+d["Idade"]=int(input("Digite sua idade: "))
+d["Telefone"]=input("Digite seu telefone: ")
+d["Endereço"]=input("Digite seu endereço: ")
+for key,value in d.items():
+     print(key,value,sep="...")

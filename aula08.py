@@ -62,8 +62,13 @@ while opcao!=4:
         print("Digite o numero correspondente")
         for i in range(len(lista)):
             print(lista[i], "->", i)
-        opcaoProduto=int(input("\nDigite a opção: "))
-        lista.pop(opcaoProduto)
+            opcaoProduto=int(input("\nDigite a opção: "))
+            while opcaoProduto>i:
+                print("Produto não encontrado")
+                opcaoProduto=int(input("\nDigite o produto: "))
+            else:
+                lista.pop(opcaoProduto)
+                print("Produto removido!!!")
     elif opcao ==3:
         lista.clear()
     elif opcao ==5:

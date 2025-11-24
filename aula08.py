@@ -118,9 +118,7 @@ for key,value in cadastro.items():
      print(key,value,sep=" : ")
 
 #ex02:
-d={"Nome":"","Idade":0,
-            "Telefone":"",
-            "Endereço":"",}
+d={"Nome":"","Idade":0,"Telefone":"","Endereço":"",}
 d["Nome"]=input("Digite seu nome: ")
 d["Idade"]=int(input("Digite sua idade: "))
 d["Telefone"]=input("Digite seu telefone: ")
